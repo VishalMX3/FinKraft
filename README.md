@@ -1,3 +1,5 @@
+BACKEND ROUND 1
+
 # Documentation: API Endpoint to Parse Uploaded CSV File and Save to Database
 
 NOTE: Please switch to backend directory. I have written only the backend code as per the assignment.
@@ -5,15 +7,17 @@ NOTE: Please switch to backend directory. I have written only the backend code a
 
 ## Project Setup
 
-The project dependencies are listed in the package.json file. Key dependencies include express for server setup, mongoose for MongoDB interaction, multer for handling file uploads, and csvtojson for parsing CSV files.
+The project dependencies are listed in the `package.json file`. Key dependencies include express for server setup, mongoose for MongoDB interaction, multer for handling file uploads, and csvtojson for parsing CSV files.
 
 ## Server Setup
 
-The server is set up in index.js. Express.js is used to create the server, and middleware is added to handle JSON requests, CORS, and URL-encoded bodies. The server connects to MongoDB using Mongoose and the connection string from the environment variables.
+The server is set up in `index.js`. `Express.js` is used to create the server, and middleware is added to handle JSON requests, `CORS`, and URL-encoded bodies. The server connects to `MongoDB` using `Mongoose` and the connection string from the `environment` variables.
 
 ## Data Model
 
-The data model for transactions is defined in Transaction.js using Mongoose. The schema includes fields for TransactionID, CustomerName, TransactionDate, Amount, Status, and InvoiceURL.
+The data model for transactions is defined in `Transaction.js` using Mongoose. The schema includes fields for TransactionID, CustomerName, TransactionDate, Amount, Status, and InvoiceURL.
+
+![alt text](image-1.png)
 
 ## File Upload and Parsing
 
