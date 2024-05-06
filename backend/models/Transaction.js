@@ -7,8 +7,8 @@ const transactionSchema = new mongoose.Schema({
   Amount: { type: Number, required: true },
   Status: {
     type: String,
-    enum: ["Pending", "Completed", "Cancelled"],
-    required: true,
+    enum: ["Pending", "Completed", "Failed"],
+    required: false,
   },
   InvoiceURL: { type: String, required: true },
 });
