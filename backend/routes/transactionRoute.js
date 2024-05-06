@@ -10,7 +10,7 @@ transcation.use(express.static(path.resolve(__dirname, "public")));
 
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../public/uploads/");
+    cb(null, "./public/uploads/");
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
@@ -19,6 +19,12 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-transcation.post("/upload", upload.single("file"));
+const transcationController = require("../controllers/transcationController");
+
+transcation.post(
+  "/upload",
+  upload.single("file"),
+  transcationController.uploadFile
+);
 
 module.exports = transcation;

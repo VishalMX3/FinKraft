@@ -15,10 +15,6 @@ mongoose
 app.use(express.json());
 app.use(cors());
 
-app.get("/", function (req, res) {
-  res.send("Helloz!");
-});
-
 const transactionRoute = require("./routes/transactionRoute");
 
 app.use("/", transactionRoute);
