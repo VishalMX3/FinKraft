@@ -18,12 +18,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const transactionRoute = require("./routes/transactionRoute");
 
+const PORT = process.env.PORT || 5000;
+
 app.get("/", function (req, res) {
   res.send("Hello World!");
 });
 
 app.use("/", transactionRoute);
 
-app.listen(5000, function () {
-  console.log("Example app listening on port 5000!");
+app.listen(PORT, function () {
+  console.log("App listening on port 5000!");
 });
