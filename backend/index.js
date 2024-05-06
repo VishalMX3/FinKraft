@@ -18,6 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const transactionRoute = require("./routes/transactionRoute");
 
+app.get("/", function (req, res) {
+  res.send("Hello World!");
+});
+
 app.use("/", transactionRoute);
 
 app.listen(5000, function () {
